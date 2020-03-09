@@ -157,6 +157,58 @@ echo("<br>");
 $edad=calcularEdad(1987,2020);
 echo("si usted nacio en 1987 usted tiene: ".$edad. " años");
 
+echo("<br>");
+//pregunta 8
+echo("<br>");
+echo("pregunta 8 <br>");
+echo("<br>");
+
+
+
+
+
+echo("<br>");
+//pregunta 9
+echo("<br>");
+echo("pregunta 9 <br>");
+echo("<br>");
+$jugadores=array(
+    'jugador1'=> array('nombre'=>"Radamel Falcao",'añoNacimiento'=>"1986",'Posicion'=>"delantero",'Estatura'=>"1.77"),
+        
+    'jugador2'=>array('nombre'=>"James Rodriguez",'añoNacimiento'=>"1991",'Posicion'=>"Medio Campista",'Estatura'=>"1.81"),
+        
+    'jugador3'=>array('nombre'=>"Juan Cuadrado",'añoNacimiento'=>"1988",'Posicion'=>"delantero",'Estatura'=>"1.78"),
+        
+    'jugador4'=>array('nombre'=>"Yerri Mina",'añoNacimiento'=>"1994",'Posicion'=>"Defensor",'Estatura'=>"1.95"),
+        
+    'jugador5'=>array('nombre'=>"David Ospina",'añoNacimiento'=>"1988",'Posicion'=>"Arquero",'Estatura'=>"1.83"),
+        
+    'jugador6'=>array('nombre'=>"Davinson sanchez",'añoNacimiento'=>"1996",'Posicion'=>"Defensor",'Estatura'=>"1.87"),
+        
+    'jugador7'=>array('nombre'=>"Duvan Zapata",'añoNacimiento'=>"1991",'Posicion'=>"Delantero",'Estatura'=>"1.86"),
+        
+    'jugador8'=>array('nombre'=>"Wilmar Barrios",'añoNacimiento'=>"1993",'Posicion'=>"Medio Campista",'Estatura'=>"1.78"),
+        
+    'jugador9'=>array('nombre'=>"Mateos Uribe",'añoNacimiento'=>"1991",'Posicion'=>"Medio Campista",'Estatura'=>"1.80"),
+        
+);
+echo("<br>...................<br>");
+
+    foreach($arreglosUnidimencionales as $clave=>$valor){
+        echo($clave).": ";
+        
+        echo($valor);
+        echo("<br>");
+
+    }
+
+
+
+
+
+
+
+
 
 
 
