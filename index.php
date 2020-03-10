@@ -125,11 +125,20 @@ echo("pregunta 5 <br>");
 echo("<br>");
 
 
+
 echo("<br>");
 //pregunta 6
-echo("<br>");
+
 echo("pregunta 6 <br>");
+
+
+$Numeros=array("2","4","6","8","10","12","14","16","18","20");
 echo("<br>");
+foreach($Numeros as $clave=> $valor)
+{
+    echo "<br> El Primer numero par es : ".$valor;
+    
+}
 
 
 
@@ -158,19 +167,24 @@ $edad=calcularEdad(1987,2020);
 echo("si usted nacio en 1987 usted tiene: ".$edad. " años");
 
 echo("<br>");
-//pregunta 8
-echo("<br>");
-echo("pregunta 8 <br>");
-echo("<br>");
-
-
-
-
-
-echo("<br>");
 //pregunta 9
 echo("<br>");
 echo("pregunta 9 <br>");
+echo("<br>");
+$biotipo=Biotipo(1.65);
+echo("Para una altura de 1.65 su biotipo es: ".$biotipo);
+echo("<br>");
+$biotipo=Biotipo(1.79);
+echo("Para una altura de 1.79 su biotipo es: ".$biotipo);
+echo("<br>");
+$biotipo=Biotipo(1.95);
+echo("Para una altura de 1.95 su biotipo es: ".$biotipo);
+
+
+echo("<br>");
+//pregunta 10
+echo("<br>");
+echo("pregunta 10 <br>");
 echo("<br>");
 $jugadores=array(
     'jugador1'=> array('nombre'=>"Radamel Falcao",'añoNacimiento'=>"1986",'Posicion'=>"delantero",'Estatura'=>"1.77"),
@@ -192,15 +206,23 @@ $jugadores=array(
     'jugador9'=>array('nombre'=>"Mateos Uribe",'añoNacimiento'=>"1991",'Posicion'=>"Medio Campista",'Estatura'=>"1.80"),
         
 );
-echo("<br>...................<br>");
 
-    foreach($arreglosUnidimencionales as $clave=>$valor){
-        echo($clave).": ";
+echo("<br>...................<br>");
+foreach($jugadores as $clavesArreglosUnidimencionales=>$arreglosUnidimencionales){
+    echo("<br>");
+    echo($clavesArreglosUnidimencionales);
+    echo("<br>");
+    
+    echo("<br>");
+
+    foreach($arreglosUnidimencionales as $valor){
         
         echo($valor);
         echo("<br>");
 
     }
+
+}
 
 
 
