@@ -22,6 +22,7 @@ echo("<br>La Multiplicación de:".$numero1."*".$numero2."=".$multiplicacion);
 
 echo("<br>La división de:".$numero1."/".$numero2."=".$division);
 echo("<br>");
+
 //pregunta 2
 echo("<br>");
 echo("pregunta 2 <br>");
@@ -51,36 +52,38 @@ if($imc<=18.4){
     echo("su indice de masa corporal es: ".$imc."por lo tanto tiene obecidad3  ");
 }
 echo("<br>");
+
 //pregunta 3
 echo("<br>");
 echo("pregunta 3 <br>");
 echo("<br>");
-
 
 $cantidad=5;
 $precio=150000;
 $valorNeto=$cantidad*$precio;
 $Descuento=$valorNeto*0.20;
 $valorTotal=($cantidad*$precio)-$Descuento;
-$ValorDescuento=$valorNeto*0.20;
+$ValorDescuento1=0;
+$ValorDescuento2=0;
+$ValorDescuento3=0;
 
-if($cantidad=3){
+if($cantidad <=3 ){
     echo("Cantida vendida: ".$cantidad);
     echo("<br>");
             echo("Costo neto: ".$valorNeto);
             echo("<br>");
             echo("Descuento: ".$Descuento);
             echo("<br>");
-            echo("valor del descuento : ".$ValorDescuento);
+            echo("valor del descuento 10% : ");
             echo("<br>");
             echo("Total a pagar: ".$valorTotal);
             echo("<br>");
-}else if ($cantidad>5 && $cantidad<=5){
+}else if ($cantidad>3 && $cantidad<=5){
     echo("Costo neto: ".$valorNeto);
             echo("<br>");
             echo("Descuento: ".$Descuento);
             echo("<br>");
-            echo("valor del descuento : ".$ValorDescuento);
+            echo("valor del descuento 20% : ");
             echo("<br>");
             echo("Total a pagar: ".$valorTotal);
             echo("<br>");
@@ -89,7 +92,7 @@ if($cantidad=3){
             echo("<br>");
             echo("Descuento: ".$Descuento);
             echo("<br>");
-            echo("valor del descuento : ".$ValorDescuento);
+            echo("valor del descuento 20% : ");
             echo("<br>");
             echo("Total a pagar: ".$valorTotal);
             echo("<br>");
@@ -119,6 +122,7 @@ if($CantidadHoras=36){
 }
 
 echo("<br>");
+
 //pregunta 5
 echo("<br>");
 echo("pregunta 5 <br>");
@@ -129,8 +133,7 @@ echo("<br>");
 echo("<br>");
 //pregunta 6
 
-echo("pregunta 6 <br>");
-
+echo("pregunta 6 ");
 
 $Numeros=array("2","4","6","8","10","12","14","16","18","20");
 echo("<br>");
@@ -139,7 +142,6 @@ foreach($Numeros as $clave=> $valor)
     echo "<br> El Primer numero par es : ".$valor;
     
 }
-
 
 
 echo("<br>");
