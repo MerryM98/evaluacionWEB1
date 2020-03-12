@@ -67,7 +67,7 @@ $ValorDescuento1=0;
 $ValorDescuento2=0;
 $ValorDescuento3=0;
 
-if($cantidad <=3 ){
+if($cantidad ==3 ){
     echo("Cantida vendida: ".$cantidad);
     echo("<br>");
             echo("Costo neto: ".$valorNeto);
@@ -126,7 +126,55 @@ echo("<br>");
 //pregunta 5
 echo("<br>");
 echo("pregunta 5 <br>");
-echo("<br>");
+
+
+$usuario1="Merilian Mejia -"; 
+$telefono1="5432189 -"; 
+$direccion1= "Cr 50 a oeste # 100 - 76 -"; 
+$salario1=3520000;
+
+$usuario2="Meilyn Mejia -"; 
+$telefono2="321997899 -"; 
+$direccion2= "Cll 50  # 20 - 67-";  
+$salario2=4580000;
+
+$usuario3="Jorge Oñate -"; 
+$telefono3="3236674849 -"; 
+$direccion3= "Cr 20 a sur # 100 - 76 -"; 
+$salario3=1250000;
+
+$usuario4="Kaleth Morales -"; 
+$telefono4="5432189 -"; 
+$direccion4= "Cr 10 a sur # 100 - 32 -"; 
+$salario4=3800000;
+
+$usuario5="Silveltre Dangon -"; 
+$telefono5="5432189 -"; 
+$direccion5= "Cll 30 a  # 50 - 58 -"; 
+$salario5=6490000;
+
+
+echo "<br>";
+echo $usuario1.$telefono1.$direccion1." $".$salario1."<br>";
+echo $usuario2.$telefono2.$direccion2." $".$salario2."<br>";
+echo $usuario3.$telefono3.$direccion3." $".$salario3."<br>";
+echo $usuario4.$telefono4.$direccion4." $".$salario4."<br>";
+echo $usuario5.$telefono5.$direccion5." $".$salario5."<br>";
+
+$sumarSalario=($salario1+$salario2+$salario3+$salario4+$salario5);
+$salarioSB=20000000;
+$salarioSC=15000000;
+echo "<br>";
+if($sumarSalario>$salarioSB&&$sumarSalario>$salarioSC){
+
+    echo"El mayor ingrso lo tiene la sucrusal A";
+}
+elseif($salarioSB>$sumarSalario&&$salarioSB>$salarioSC){
+    echo"El mayor ingreso lo tiene la sucrusal B";
+}
+else
+    echo"El mayor ingreso lo tiene la sucrusal C";
+
 
 
 
@@ -187,7 +235,7 @@ echo("<br>");
 //pregunta 10
 echo("<br>");
 echo("pregunta 10 <br>");
-echo("<br>");
+
 $jugadores=array(
     'jugador1'=> array('nombre'=>"Radamel Falcao",'añoNacimiento'=>"1986",'Posicion'=>"delantero",'Estatura'=>"1.77"),
         
@@ -209,7 +257,7 @@ $jugadores=array(
         
 );
 
-echo("<br>...................<br>");
+
 foreach($jugadores as $clavesArreglosUnidimencionales=>$arreglosUnidimencionales){
     echo("<br>");
     echo($clavesArreglosUnidimencionales);
