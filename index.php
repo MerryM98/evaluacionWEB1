@@ -58,45 +58,28 @@ echo("<br>");
 echo("pregunta 3 <br>");
 echo("<br>");
 
-$cantidad=5;
-$precio=150000;
-$valorNeto=$cantidad*$precio;
-$Descuento=$valorNeto*0.20;
-$valorTotal=($cantidad*$precio)-$Descuento;
-$ValorDescuento1=0;
-$ValorDescuento2=0;
-$ValorDescuento3=0;
+echo("preguna#3 <br>");
+$cantidadVendida = 5 ;
+$costoNeto = 150000 ;
+$totalCompra = ($cantidadVendida * $costoNeto) ;
+$valordescuento=150000;
+$descuento = 0.20;
+$valorPagar = ($cantidadVendida * $costoNeto)-$valordescuento;
 
-if($cantidad ==3 ){
-    echo("Cantida vendida: ".$cantidad);
-    echo("<br>");
-            echo("Costo neto: ".$valorNeto);
-            echo("<br>");
-            echo("Descuento: ".$Descuento);
-            echo("<br>");
-            echo("valor del descuento 10% : ");
-            echo("<br>");
-            echo("Total a pagar: ".$valorTotal);
-            echo("<br>");
-}else if ($cantidad>3 && $cantidad<=5){
-    echo("Costo neto: ".$valorNeto);
-            echo("<br>");
-            echo("Descuento: ".$Descuento);
-            echo("<br>");
-            echo("valor del descuento 20% : ");
-            echo("<br>");
-            echo("Total a pagar: ".$valorTotal);
-            echo("<br>");
-}else if ($cantidad>5){
-    echo("Costo neto: ".$valorNeto);
-            echo("<br>");
-            echo("Descuento: ".$Descuento);
-            echo("<br>");
-            echo("valor del descuento 20% : ");
-            echo("<br>");
-            echo("Total a pagar: ".$valorTotal);
-            echo("<br>");
+
+if ( $cantidadVendida == 3 ) {
+  $valordescuento = $totalCompra * 0.10 ;
+    $descuento = 10 ;
+} else  if ( $cantidadVendida > 3 && $cantidadVendida <= 5 ) {
+  $valordescuento = $totalCompra * 0.20 ;
+    $descuento = 20 ;
+} else  if ( $cantidadVendida > 5 ) {
+  $valordescuento = $totalCompra * 0.40 ;
+    $descuento = 40 ;
 }
+echo ( "Cantidad Vendida:" . $cantidadVendida .  "<br> Costo Neto:" . $totalCompra .
+"<br> Descuento es:" . $descuento . "% <br> Valor del Descuento:" . $valordescuento . "<br> Valor a Pagar es:" . $valorPagar );
+
 
 echo("<br>");
 //pregunta 4
@@ -221,13 +204,13 @@ echo("<br>");
 echo("<br>");
 echo("pregunta 9 <br>");
 echo("<br>");
-$biotipo=Biotipo(1.65);
+$biotipo=biotipo(1.65);
 echo("Para una altura de 1.65 su biotipo es: ".$biotipo);
 echo("<br>");
-$biotipo=Biotipo(1.79);
+$biotipo=biotipo(1.79);
 echo("Para una altura de 1.79 su biotipo es: ".$biotipo);
 echo("<br>");
-$biotipo=Biotipo(1.95);
+$biotipo=biotipo(1.95);
 echo("Para una altura de 1.95 su biotipo es: ".$biotipo);
 
 
@@ -237,23 +220,23 @@ echo("<br>");
 echo("pregunta 10 <br>");
 
 $jugadores=array(
-    'jugador1'=> array('nombre'=>"Radamel Falcao",'añoNacimiento'=>"1986",'Posicion'=>"delantero",'Estatura'=>"1.77"),
+    'jugador1'=> array('nombre'=>"Radamel Falcao",calcularEdad(1986,2020),'Posicion'=>"delantero", biotipo(1.76)),
         
-    'jugador2'=>array('nombre'=>"James Rodriguez",'añoNacimiento'=>"1991",'Posicion'=>"Medio Campista",'Estatura'=>"1.81"),
+    'jugador2'=>array('nombre'=>"James Rodriguez",calcularEdad(1991,2020),'Posicion'=>"Medio Campista",biotipo(1.81)),
         
-    'jugador3'=>array('nombre'=>"Juan Cuadrado",'añoNacimiento'=>"1988",'Posicion'=>"delantero",'Estatura'=>"1.78"),
+    'jugador3'=>array('nombre'=>"Juan Cuadrado",calcularEdad(1988,2020),'Posicion'=>"delantero",biotipo(1.78)),
         
-    'jugador4'=>array('nombre'=>"Yerri Mina",'añoNacimiento'=>"1994",'Posicion'=>"Defensor",'Estatura'=>"1.95"),
+    'jugador4'=>array('nombre'=>"Yerri Mina",calcularEdad(1994,2020),'Posicion'=>"Defensor",biotipo(1.95)),
         
-    'jugador5'=>array('nombre'=>"David Ospina",'añoNacimiento'=>"1988",'Posicion'=>"Arquero",'Estatura'=>"1.83"),
+    'jugador5'=>array('nombre'=>"David Ospina",calcularEdad(1988,2020),'Posicion'=>"Arquero",biotipo(1.83)),
         
-    'jugador6'=>array('nombre'=>"Davinson sanchez",'añoNacimiento'=>"1996",'Posicion'=>"Defensor",'Estatura'=>"1.87"),
+    'jugador6'=>array('nombre'=>"Davinson sanchez",calcularEdad(1996,2020),'Posicion'=>"Defensor",biotipo(1.87)),
         
-    'jugador7'=>array('nombre'=>"Duvan Zapata",'añoNacimiento'=>"1991",'Posicion'=>"Delantero",'Estatura'=>"1.86"),
+    'jugador7'=>array('nombre'=>"Duvan Zapata",calcularEdad(1991,2020),'Posicion'=>"Delantero",biotipo(1.86)),
         
-    'jugador8'=>array('nombre'=>"Wilmar Barrios",'añoNacimiento'=>"1993",'Posicion'=>"Medio Campista",'Estatura'=>"1.78"),
+    'jugador8'=>array('nombre'=>"Wilmar Barrios",calcularEdad(1993,2020),'Posicion'=>"Medio Campista",biotipo(1.78)),
         
-    'jugador9'=>array('nombre'=>"Mateos Uribe",'añoNacimiento'=>"1991",'Posicion'=>"Medio Campista",'Estatura'=>"1.80"),
+    'jugador9'=>array('nombre'=>"Mateos Uribe",calcularEdad(1991,2020),'Posicion'=>"Medio Campista",biotipo(1.80)),
         
 );
 
@@ -273,8 +256,6 @@ foreach($jugadores as $clavesArreglosUnidimencionales=>$arreglosUnidimencionales
     }
 
 }
-
-
 
 
 

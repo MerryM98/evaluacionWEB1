@@ -8,7 +8,7 @@ function calcularEdad($nacimiento,$actual){
 
 
 //funcion pregunta 9 
-function Biotipo($estatura){
+function biotipo($estatura){
     $biotipo="";
     if($estatura<1.70){
         $biotipo="Bajo";
